@@ -1,0 +1,247 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: arial, sans-serif;
+  color: white;
+}
+
+/* Global Styles */
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+video {
+  z-index: -2;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Disable controls */
+
+}
+
+@font-face { /* Import custom font */
+  font-family: "Quiet Meows"; src: url('QuietMeows-48jx.ttf'); 
+}
+
+h1 {
+  font-family: "Quiet Meows", "Helvetica", sans-serif;
+  -webkit-text-stroke: 1px black; /* Add outline to text */
+}
+
+.container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+/* Nav Bar */
+
+.nav {  
+  background-color: rgba(0, 0, 0, 0.5); /* Make navbar transparent */
+  position: fixed;
+  font-size: 20px;
+  font-family: "Quiet Meows", Helvetica;
+  border-bottom: 1px solid #A1124C;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo { /* Logo in navbar */
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 170px;
+  float: left;
+}
+
+.menu {
+  margin: 0 30px 0 0;
+}
+
+.menu a {
+  display: block;
+  float: right;
+  text-decoration: none;
+  color: white;
+  padding: 0 20px;
+  margin: 0;
+  line-height: 70px;
+}
+
+span {
+  color: #A1124C;
+  font-weight: bold;
+}
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle {
+  display: none;
+}
+
+/* Section 1 "Video Section"*/
+
+#sect1 {
+  text-align: center; 
+}
+
+#sect1 h1 { /* Stylized main header of the page */
+  -webkit-text-stroke: 2px black; /* Add outline to text */
+  padding-top: 350px;
+  font-size: 50px;
+  font-family: "Quiet Meows";
+}
+
+
+/* Section 2 "3 Facts Section"*/
+
+#sect2 {
+  background-color: #A1124C;
+}
+
+#sect2 .container div {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+#sect2 .container div img {
+  height: 400px;
+}
+
+/* Section 3 Information Section*/
+
+#sect3 {
+  background: url(../images/cats_group.jpg);
+  line-height: 200%;  
+  text-align: center;
+}
+
+#sect3 .container div {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 50px;
+  margin-bottom: 20%;
+}
+
+
+
+#sect3 p {
+  margin-bottom: 30px;
+}
+
+/* Section 4 Sign Up Section */
+#sect4 {
+  text-align: center;
+}
+
+#sect4 video {
+  position: relative;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
+  z-index: -1;
+  filter: blur(9px);
+}
+
+.videocontainer {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  margin: auto;
+  padding: 100px 30px;
+  max-height: 300px;
+}
+
+.formcontainer {
+  position: relative;
+}
+
+#sect4 input {
+  margin-bottom: 20px;
+  width: 80%;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
+}
+
+#sect4 button {
+  appearance: none;
+  padding: 10px;
+  border: none;
+  background-color: #A1124C;
+  color: white;
+  border-radius: 10px;
+  width: 60%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    display: none;  
+
+  }
+
+  .menu a {
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+    float: none;
+  }
+
+  #toggle:checked + .menu {
+    position: relative;
+    top: 71px;
+    display: block;
+  }
+
+  section {
+    height: auto;
+  }
+
+  /* Section 1 "Video Section"*/
+    #sect1 h1 {
+      padding-bottom: 350px;
+    }
+
+  /* Section 2 "3 Facts Section"*/
+    #sect2 .container div {
+      width: 90%;
+      margin: auto;
+      clear: both;
+    }
+
+  /* Section 4 Sign Up Section */
+    .videocontainer  {
+      width: 80%;
+    }
+}
